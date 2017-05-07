@@ -16,8 +16,8 @@ import java.util.List;
  */
 public class UserTest {
 
-    ApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
-    UserService userService=(UserService)context.getBean("userService");
+
+    UserService userService=new UserService();
     @Test
     public void createUser(){
 
@@ -26,11 +26,11 @@ public class UserTest {
         u.setPassword("123456");
         u.setCreatedDate(new LocalDate());
         u.setStatus(1);
-        /*RoleEntity role=new RoleEntity();
+        RoleEntity role=new RoleEntity();
         role.setName("admin");
         role.setStatus(1);
         role.setCreatedDate(new LocalDate());
-        u.setRoleEntity(role);*/
+        u.setRoleEntity(role);
         try {
             userService.create(u);
         } catch (Exception e) {
@@ -52,8 +52,7 @@ public class UserTest {
     }
     @Test
     public void testGetAllUser(){
-        Long id=new Long(6);
-        try {
+       try {
             List<UserEntity> list=userService.getall();
             Assert.assertNotNull(list);
             Assert.assertEquals(1,list.size());

@@ -1,5 +1,6 @@
 package com.pmtu.caffe.dao;
 
+import com.pmtu.caffe.utils.HibernateUtil;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -11,18 +12,8 @@ import java.util.List;
  */
 public class GenericDAO<T> implements IGenericDAO<T> {
 
-    private SessionFactory sessionFactory;
-
-    public SessionFactory getSessionFactory() {
-        return sessionFactory;
-    }
-
-    public void setSessionFactory(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
-
     protected Session getSession() {
-        return sessionFactory.getCurrentSession();
+        return HibernateUtil.getSessionFactory().getCurrentSession();
     }
 
     @Override
