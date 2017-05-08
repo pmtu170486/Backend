@@ -12,8 +12,19 @@ import java.util.List;
  */
 public class GenericDAO<T> implements IGenericDAO<T> {
 
+    private SessionFactory sessionFactory;
+
+    public SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
+
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
+
     protected Session getSession() {
-        return HibernateUtil.getSessionFactory().getCurrentSession();
+        //return HibernateUtil.getSessionFactory().getCurrentSession();
+        return sessionFactory.getCurrentSession();
     }
 
     @Override

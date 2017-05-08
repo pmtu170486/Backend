@@ -17,7 +17,8 @@ import java.util.List;
 public class UserTest {
 
 
-    UserService userService=new UserService();
+    /*ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("spring-config.xml");
+    UserService userService=(UserService)context.getBean("userService");
     @Test
     public void createUser(){
 
@@ -90,5 +91,5 @@ public class UserTest {
             Assert.fail();
         }
 
-    }
+    }*/
 }

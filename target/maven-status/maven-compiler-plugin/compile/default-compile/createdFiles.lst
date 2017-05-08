@@ -1,4 +1,5 @@
 com\pmtu\caffe\service\IUserService.class
+com\pmtu\caffe\utils\HibernateUtil.class
 com\pmtu\caffe\dao\IUserDao.class
 com\pmtu\caffe\dao\Impl\UserDaoImpl.class
 com\pmtu\caffe\entity\UserEntity.class
