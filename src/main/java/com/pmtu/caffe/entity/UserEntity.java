@@ -46,7 +46,7 @@ public class UserEntity {
     @Column(name = "status")
     private Integer status;
 
-    @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     @JoinColumn(name = "role")
     private RoleEntity roleEntity;
 
