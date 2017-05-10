@@ -19,4 +19,9 @@ public class UserDaoImpl extends GenericDAO<UserEntity> implements IUserDao {
         userEntity.setModifiedDate(new LocalDate());
         return super.update(userEntity);
     }
+
+    @Override
+    public UserEntity login(String username, String passworld) {
+        return null;
+    }
 }
