@@ -54,7 +54,7 @@ public class UserService implements IUserService<UserEntity> {
     }
 
     @Override
-    public void changeStatus() {
+    public void activeOrInactive() {
 
     }
 }
