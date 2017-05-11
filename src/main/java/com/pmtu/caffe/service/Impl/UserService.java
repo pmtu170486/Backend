@@ -52,4 +52,9 @@ public class UserService implements IUserService<UserEntity> {
     public boolean checkExists(String username) {
         return false;
     }
+
+    @Override
+    public void changeStatus() {
+
+    }
 }
