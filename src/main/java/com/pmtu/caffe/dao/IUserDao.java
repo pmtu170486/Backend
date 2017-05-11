@@ -8,4 +8,5 @@ import com.pmtu.caffe.entity.UserEntity;
 public interface IUserDao extends IGenericDAO<UserEntity> {
 
     public UserEntity login(String username,String passworld);
+    public boolean checkExists(String username);
 }

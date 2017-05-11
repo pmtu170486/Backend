@@ -25,4 +25,9 @@ public class UserDaoImpl extends GenericDAO<UserEntity> implements IUserDao {
     public UserEntity login(String username, String passworld) {
         return null;
     }
+
+    @Override
+    public boolean checkExists(String username) {
+        return false;
+    }
 }
