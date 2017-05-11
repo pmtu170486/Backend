@@ -42,4 +42,14 @@ public class UserService implements IUserService<UserEntity> {
     public List<UserEntity> getall() throws Exception {
         return userDao.getall(UserEntity.class);
     }
+
+    @Override
+    public UserEntity login(String username, String passworld) {
+        return null;
+    }
+
+    @Override
+    public boolean checkExists(String username) {
+        return false;
+    }
 }
