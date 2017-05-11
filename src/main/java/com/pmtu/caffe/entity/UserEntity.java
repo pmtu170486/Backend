@@ -1,5 +1,7 @@
 package com.pmtu.caffe.entity;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.Type;
 import org.joda.time.LocalDate;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -47,7 +49,9 @@ public class UserEntity {
     private Integer status;
 
     @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    @Fetch(FetchMode.JOIN)
     @JoinColumn(name = "role")
+
     private RoleEntity roleEntity;
 
     public RoleEntity getRoleEntity() {

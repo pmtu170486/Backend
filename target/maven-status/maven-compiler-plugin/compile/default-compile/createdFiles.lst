@@ -1,10 +1,10 @@
-com\pmtu\caffe\service\IUserService.class
-com\pmtu\caffe\utils\HibernateUtil.class
-com\pmtu\caffe\dao\IUserDao.class
-com\pmtu\caffe\dao\Impl\UserDaoImpl.class
-com\pmtu\caffe\entity\UserEntity.class
-com\pmtu\caffe\service\Impl\UserService.class
-com\pmtu\caffe\dao\GenericDAO.class
 com\pmtu\caffe\entity\RoleEntity.class
+com\pmtu\caffe\service\Impl\UserService.class
+com\pmtu\caffe\service\IUserService.class
 com\pmtu\caffe\service\IGenerateService.class
 com\pmtu\caffe\dao\IGenericDAO.class
+com\pmtu\caffe\dao\Impl\UserDaoImpl.class
+com\pmtu\caffe\utils\HibernateUtil.class
+com\pmtu\caffe\dao\GenericDAO.class
+com\pmtu\caffe\entity\UserEntity.class
+com\pmtu\caffe\dao\IUserDao.class
