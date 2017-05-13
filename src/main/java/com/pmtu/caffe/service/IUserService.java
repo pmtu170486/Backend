@@ -8,5 +8,5 @@ import com.pmtu.caffe.entity.UserEntity;
 public interface IUserService<T> extends IGenerateService<T> {
     public UserEntity login(String username, String passworld);
     public boolean checkExists(String username);
-    public void activeOrInactive();
+
 }

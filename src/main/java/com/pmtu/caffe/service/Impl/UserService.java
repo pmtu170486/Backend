@@ -53,8 +53,5 @@ public class UserService implements IUserService<UserEntity> {
         return false;
     }
 
-    @Override
-    public void activeOrInactive() {
 
-    }
 }
