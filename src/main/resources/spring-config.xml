@@ -11,12 +11,9 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 <!-- User -->
 
-    <bean id="userService" class="com.pmtu.caffe.service.Impl.UserService">
-        <property name="userDao" ref="userDao"/>
-    </bean>
-    <bean id="userDao" class="com.pmtu.caffe.dao.Impl.UserDaoImpl">
-        <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
+    <context:component-scan base-package="com.pmtu.caffe"/>
+    <bean id="userService" class="com.pmtu.caffe.service.Impl.UserService"/>
+    <bean id="userDao" class="com.pmtu.caffe.dao.Impl.UserDaoImpl"/>
     <!-- Role -->
     <!-- Product -->
     <!-- Categogy -->

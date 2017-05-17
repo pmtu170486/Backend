@@ -4,6 +4,7 @@ import com.pmtu.caffe.utils.HibernateUtil;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -12,16 +13,17 @@ import java.util.List;
  */
 public class GenericDAO<T> implements IGenericDAO<T> {
 
+    @Autowired
     private SessionFactory sessionFactory;
 
-    public SessionFactory getSessionFactory() {
+    /*public SessionFactory getSessionFactory() {
         return sessionFactory;
     }
 
     public void setSessionFactory(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
-
+*/
     protected Session getSession() {
         //return HibernateUtil.getSessionFactory().getCurrentSession();
         return sessionFactory.getCurrentSession();

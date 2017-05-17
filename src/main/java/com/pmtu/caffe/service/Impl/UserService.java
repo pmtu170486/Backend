@@ -3,6 +3,7 @@ package com.pmtu.caffe.service.Impl;
 import com.pmtu.caffe.dao.Impl.UserDaoImpl;
 import com.pmtu.caffe.entity.UserEntity;
 import com.pmtu.caffe.service.IUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -11,11 +12,12 @@ import java.util.List;
  */
 public class UserService implements IUserService<UserEntity> {
 
-    private UserDaoImpl userDao=new UserDaoImpl();
+    @Autowired
+    private UserDaoImpl userDao;
 
-    public void setUserDao(UserDaoImpl userDao) {
+    /*public void setUserDao(UserDaoImpl userDao) {
         this.userDao = userDao;
-    }
+    }*/
 
     @Override
     public void create(UserEntity userEntity) throws Exception {
